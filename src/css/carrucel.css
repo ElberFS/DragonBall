@@ -1,11 +1,11 @@
 
-.banner{
+.banner-slider{
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
-.banner .slider{
+.banner-slider .slider{
     position: absolute;
     width: 200px;
     height: 280px;
@@ -24,14 +24,14 @@
     }
 }
 
-.banner .slider .item{
+.banner-slider .slider .item{
     position: absolute;
     inset: 0 0 0 0;
     transform: 
         rotateY(calc( (var(--position) - 100) * (360 / var(--quantity)) * 1deg))
         translateZ(550px);
 }
-.banner .slider .item img{
+.banner-slider .slider .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
