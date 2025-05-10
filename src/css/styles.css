@@ -143,7 +143,7 @@ body::before {
     }
 
     .banner .content h1 {
-        font-size: 5em; /* Goku text smaller */
+        font-size: 4em; /* Goku text smaller */
         line-height: 1.2em;
         margin-top: 20px;
         color: #f75e26;
