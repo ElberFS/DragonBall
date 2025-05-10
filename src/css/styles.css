@@ -38,7 +38,6 @@ body::before {
     z-index: 2;
 }
 
-/* Banner y contenido principal */
 .banner {
     width: 100%;
     height: 100vh;
@@ -84,10 +83,12 @@ body::before {
     font-family: 'Poppins', sans-serif;
     text-align: right;
     max-width: 200px;
+    color: #b64016;
 }
 
 .banner .content h2 {
     font-size: 2em;
+    
 }
 .author {
     font-family: 'Poppins', sans-serif;
@@ -114,41 +115,73 @@ body::before {
     background-repeat: no-repeat;
     background-position: 50% 90%;
     z-index: 1;
-    /* Elimina esta línea: */
-    /* background-attachment: fixed; */
     opacity: 1;
-    transition: opacity 0.5s ease-in-out 0.4s; /* Añadimos transición al model */
+    transition: opacity 0.5s ease-in-out 0.4s; 
 }
 
 .banner.fade-out .banner .content .model {
     opacity: 0;
 }
-@media screen and (max-width: 767px) {
-    .banner .content {
-        justify-content: center;
-        
-        text-align: center;
-    }
 
+
+/* Responsive Design */
+@media (max-width: 1200px) {
     .banner .content h1 {
-        font-size: 5em;
-        width: 100%; 
-        padding-bottom: 400px;
-        position: relative;
-    }
-
-    .banner .content h1::after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        
-        left: 0;
-        color: #313131;
-        width: 100%;
-        text-align: center;
-        -webkit-text-stroke: 1px #ffffff; /* Borde blanco */
-        pointer-events: none;
+        font-size: 10em;
     }
 }
 
+@media (max-width: 992px) {
+    .banner .content h1 {
+        font-size: 7em;
+    }
+
+    .banner .content {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    .banner .content .author {
+        text-align: center;
+        max-width: none;
+    }
+
+    .banner .content .model {
+        background-size: contain;
+        background-position: center bottom;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner .content h1 {
+        font-size: 4.5em;
+        line-height: 1em;
+        margin-top: 60px;
+    }
+
+    .banner .content .author h2 {
+        font-size: 1.5em;
+    }
+
+    .banner .content .author p {
+        font-size: 1em;
+    }
+
+    .banner .content .model {
+        height: 60vh;
+        background-size: contain;
+        background-position: center bottom;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .content h1 {
+        font-size: 2em;
+    }
+
+    .banner .content {
+        padding: 0 20px 60px;
+    }
+}
 

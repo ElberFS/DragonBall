@@ -9,15 +9,12 @@
 body {
     margin-top: 100px;
     background-color: #1a1a1a;
-    /* fondo más oscuro */
     background-image:
         repeating-linear-gradient(to right, transparent 0 100px,
             #6a0dad33 100px 101px
-            /* línea morada con opacidad */
         ),
         repeating-linear-gradient(to bottom, transparent 0 100px,
             #6a0dad33 100px 101px
-            /* línea morada con opacidad */
         );
     overflow: hidden;
 }
@@ -110,4 +107,71 @@ body::before {
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banner-slider .slider {
+        width: 180px;
+        height: 230px;
+    }
+
+    .banner-slider .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(450px);
+    }
+
+    .banner-slider .content .model {
+        background-size: auto 120%;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-slider .slider {
+        width: 160px;
+        height: 210px;
+    }
+
+    .banner-slider .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(400px);
+    }
+
+    .banner-slider .content .model {
+        background-size: auto 110%;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-slider .slider {
+        width: 140px;
+        height: 180px;
+        top: 15%;
+    }
+
+    .banner-slider .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+    }
+
+    .banner-slider .content .model {
+        background-size: auto 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-slider .slider {
+        width: 120px;
+        height: 160px;
+        top: 20%;
+    }
+
+    .banner-slider .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    }
+
+    .banner-slider .content .model {
+        background-size: auto 90%;
+    }
 }
