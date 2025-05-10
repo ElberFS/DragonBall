@@ -6,42 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-image: url('../assets/images/bg_carrusel.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: #000;
-            position: relative;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            /* Más alto = más oscuro */
-            pointer-events: none;
-            z-index: 1;
-        }
+        
     </style>
     <link rel="stylesheet" href="../css/carrucel.css">
 </head>
 
 <body>
+
     <div class="banner-slider">
         <div class="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><img src="../assets/../assets/images/dragon_1.jpeg" alt=""></div>
@@ -55,7 +26,12 @@
             <div class="item" style="--position: 9"><img src="../assets/images/dragon_9.jpeg" alt=""></div>
             <div class="item" style="--position: 10"><img src="../assets/images/dragon_10.jpeg" alt=""></div>
         </div>
+        <div class="content">
+            <div class="model"></div>
+        </div>
     </div>
+    
+
 </body>
 
 </html>
